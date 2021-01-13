@@ -366,12 +366,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Pandas/">
+                                <span class="chip bg-color">Pandas</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -410,8 +423,8 @@ dates<span class="token operator">=</span>pd<span class="token punctuation">.</s
 <p>运行结果：<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/3.png">  </p>
 <hr>
 <h2 id="创建DataFrame"><a href="#创建DataFrame" class="headerlink" title="创建DataFrame"></a>创建DataFrame</h2><p>在所有操作之前当然要先import必要的pandas库，因为pandas常与numpy一起配合使用，所以也一起import吧。</p>
-<pre class=" language-python"><code class="language-python">pip install pandas <span class="token keyword">as</span> pd
-pip install numpy <span class="token keyword">as</span> np</code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</code></pre>
 <ol>
 <li>可以直接使用pandas的DataFrame函数创建，比如接下来我们随机创建一个6*4的DataFrame。  </li>
 </ol>
@@ -618,7 +631,7 @@ df<span class="token punctuation">[</span><span class="token string">'a'</span><
 df<span class="token punctuation">[</span><span class="token string">'f'</span><span class="token punctuation">]</span><span class="token operator">=</span>pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> index<span class="token operator">=</span>df<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">)</span></code></pre>
 运行结果：<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/11.png"></li>
-<li>**对数据处理时，需要判空，然后进行去除或者填充，代码如下：   **<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/12.png"></li>
+<li><strong>对数据处理时，需要判空，然后进行去除或者填充，代码如下：</strong><br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/12.png"></li>
 </ol>
 <hr>
 <h2 id="文件的读取保存"><a href="#文件的读取保存" class="headerlink" title="文件的读取保存"></a>文件的读取保存</h2><ol>
@@ -701,7 +714,11 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Pandas/">
+                                    <span class="chip bg-color">Pandas</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -869,18 +886,17 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/">
+                <a href="/2021/01/13/Matplotlib%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Pandas学习">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Matplotlib学习">
                         
-                        <span class="card-title">Pandas学习</span>
+                        <span class="card-title">Matplotlib学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -890,18 +906,29 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-13
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            haoran
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Matplotlib/">
+                        <span class="chip bg-color">Matplotlib</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -933,11 +960,23 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            haoran
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Numpy/">
+                        <span class="chip bg-color">Numpy</span>
+                    </a>
+                    
                 </div>
                 
             </div>
