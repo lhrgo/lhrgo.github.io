@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="静态博客Hexo搭建 —— 本地、服务器两开花, 花落的小屋">
+    <meta name="keywords" content="静态博客Hexo搭建——本地and服务器, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>静态博客Hexo搭建 —— 本地、服务器两开花 | 花落的小屋</title>
+    <title>静态博客Hexo搭建——本地and服务器 | 花落的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
 
 
 
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">静态博客Hexo搭建 —— 本地、服务器两开花</h1>
+                    <h1 class="description center-align post-title">静态博客Hexo搭建——本地and服务器</h1>
                 </div>
             </div>
         </div>
@@ -406,25 +406,54 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="静态博客–Hexo"><a href="#静态博客–Hexo" class="headerlink" title="静态博客–Hexo"></a>静态博客–Hexo</h2><p>静态博客：是指<strong>没有后端数据库</strong>的博客，所有文章都是以<strong>文件</strong>的形式存储，是一种<strong>纯前端的博客框架</strong>。  </p>
-<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h3><p>Node.js安装成功后，同时会自动安装一个包管理器，称为npm（Node Package Manager）。  </p>
+<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><ul>
+<li><p>电脑先装好git这个工具吧<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/3.png" alt="装好后鼠标点右键">    </p>
+</li>
+<li><p>安装Node.js:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli</code></pre>
+</li>
+<li><p>查看版本：</p>
+<pre class=" language-bash"><code class="language-bash">hexo -v  </code></pre>
+</li>
+</ul>
+<p>Node.js安装成功后，同时会自动安装一个包管理器，称为npm（Node Package Manager）。  </p>
 <blockquote>
-<p> 什么是npm？<br>npm是一个包管理器，发布者将自己的代码发布（npm publish）到代码仓库（registry），使用者将自己需要的包写入package.json文件中，到代码仓库中把代码下载（npm install）下来。</p>
+<p>什么是npm？<br>npm是一个包管理器，发布者将自己的代码发布（npm publish）到代码仓库（registry），使用者将自己需要的包写入package.json文件中，到代码仓库中把代码下载（npm install）下来。</p>
 </blockquote>
-<p>安装：npm install -g hexo-cli<br>查看版本：hexo -v（本人使用的Hexo版本为1.1.0）</p>
 <blockquote>
-<p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm：<br>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>安装成功后，可以通过以下命令查看cnpm版本：<br>cnpm -v<br>通过cnpm来操作下载速度会得到很大提升，但包的版本不一定是最新的。</p>
+<p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm，</p>
 </blockquote>
-<h3 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h3><ol>
-<li>创建目录<br>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，我的是Hexo，在此目录下操作。</li>
-<li>初始化博客<br>hexo init</li>
-<li>新建文章<br>hexo new “BlogName”（BlogName是你的文章名称）<br>会在source/_posts目录下生成BlogName.md文件，可以vim或其他Markdown编辑器进行修改。</li>
-<li>生成博客静态文件<br>hexo g（g代表generate），生成博客<strong>静态文件</strong><br>每次修改文章后，都需要通过hexo clean清理一下，<br>然后通过hexo g重新生成，<br>最后也不要忘了通过hexo s重新启动Hexo。</li>
-<li>启动博客<br>hexo s(s代表sever)</li>
-<li>更换主题<br>将需要更换的主题下载并解压缩到theme/yourThemeName目录下，yourThemeName是你给主题取的名字，如我用的主题是yilia，只需要解压缩到Hexo/themes/next目录下即可,<br>当然你也可以直接在Hexo目录下执行git clone <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a><br>解压完成后，修改_config.yaml文件中的theme属性，默认是landscape，修改为hexo-theme-matery</li>
-</ol>
-<p><em>值得注意到是，每次修改主题后，都需要通过hexo clean清理一下，然后通过hexo g重新生成public文件，最后通过hexo s重新启动hexo。</em>  </p>
-<ol start="7">
-<li>其他_config.yaml配置<br>_config.yaml文件是Hexo项目的全局配置文件，根据注释即可修改模板。<!-- ，常用的属性有：   -->
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org</code></pre>
+<p>安装成功后，可以通过以下命令查看cnpm版本</p>
+<pre class=" language-bash"><code class="language-bash">cnpm -v</code></pre>
+<p>通过cnpm来操作下载速度会得到很大提升，但包的版本不一定是最新的。</p>
+<h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><ol>
+<li><p>创建目录<br>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，我的是blog，在此目录下操作。  </p>
+</li>
+<li><p>初始化博客  </p>
+<blockquote>
+<p><strong>hexo init</strong>  </p>
+</blockquote>
+</li>
+<li><p>新建文章  </p>
+<blockquote>
+<p><strong>hexo new “BlogName”</strong> （BlogName是你的文章名称）会在source/_posts目录下生成BlogName.md文件，可以用typora、vscode等编辑器进行修改。  </p>
+</blockquote>
+</li>
+<li><p>生成博客静态文件  </p>
+<blockquote>
+<p><strong>hexo g</strong>（g代表generate），生成博客<strong>静态文件</strong><br>每次修改文章后，都需要通过<strong>hexo clean</strong>清理一下，<br>然后通过<strong>hexo g</strong>重新生成，<br>最后也不要忘了通过<strong>hexo s</strong>重新启动Hexo。<br>要部署到github或者服务器记得<strong>hexo d</strong>。</p>
+</blockquote>
+</li>
+<li><p>启动博客  </p>
+<blockquote>
+<p><strong>hexo s</strong>(s代表sever)</p>
+</blockquote>
+</li>
+<li><p>更换主题<br>将需要更换的主题下载并解压缩到<strong>theme/yourThemeName</strong>目录下，yourThemeName是你给主题取的名字，如我用的主题是hexo-theme-matery，只需要解压缩到blog/themes/目录下即可,<br>当然你也可以直接在blog目录下执行git clone <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a><br>解压完成后，修改_config.yaml文件中的theme属性，默认是landscape，修改为hexo-theme-matery</p>
+</li>
+<li><p>其他_config.yaml配置<br>_config.yaml文件是Hexo项目的全局配置文件，根据注释即可修改模板。</p>
+<!-- ，常用的属性有：   -->
 
 </li>
 </ol>
@@ -467,11 +496,111 @@ deploy:
   repo: git@106.14.153.30:/usr/DragonBaby308/repo/blog.git
   branch: master  
 ```   -->
-
-
-
-
-<p>```</p>
+<hr>
+<p><strong>本来呢，就是想搭个博客，自己玩玩，没想到丙丙和阿里云合作送粉丝长达半年的服务器（莫名开心，啊哈哈哈），白嫖到服务器后，当初也不知道怎么玩，老小白了。经过一波了解，直接买了个域名，经过10天的备案后，终于可以访问我的网站了，开心!</strong>  </p>
+<h2 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h2><p>国内的域名，根据工信部相关法法规是要备案的，不然这个域名不能使用。<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/1.png"></p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>备完案后，就开始解析你的域名吧！<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png"></p>
+<h2 id="远程提交代码"><a href="#远程提交代码" class="headerlink" title="远程提交代码"></a>远程提交代码</h2><p>为了使本地可以跟远程的github建立联系,需要在本地配置SSH密钥，这样我们就可以在本地直接提交代码到 GitHub或者远端git仓库。   </p>
+<ul>
+<li>生成rsa公钥<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa</code></pre>
+</li>
+<li>在目录C:\Users\86131.ssh找到id_rsa.pub这个文件，先复制里面的公钥。</li>
+</ul>
+<h2 id="用Git与本地建立连接"><a href="#用Git与本地建立连接" class="headerlink" title="用Git与本地建立连接"></a>用Git与本地建立连接</h2><ul>
+<li><p>用远程连接工具连接阿里云服务器，这里我用xshell连接<br>看到Welcome to Alibaba…就成功啦。<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png"></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#阿里云安装git</span>
+yum <span class="token function">install</span> <span class="token function">git</span>
+<span class="token comment" spellcheck="true">#装完可以查看git的版本</span>
+<span class="token function">git</span> --version</code></pre>
+<p><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/5.png"></p>
+</li>
+<li><p>添加一个用户git,并修改他的权限</p>
+<pre class=" language-bash"><code class="language-bash">adduser <span class="token function">git</span>
+<span class="token function">chmod</span> 740 /etc/sudoers</code></pre>
+</li>
+<li><p>修改/etc/sudoers文件, 添上git    ALL=(ALL)     ALL</p>
+<pre class=" language-bash"><code class="language-bash">vim /etc/sudoers</code></pre>
+<p>如图：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/6.png"></p>
+</li>
+<li><p>修改所有者只读的权限</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">chmod</span> 400 /etc/sudoers</code></pre>
+</li>
+<li><p>给git用户设置密码</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">passwd</span> <span class="token function">git</span></code></pre>
+</li>
+<li><p>切换至 git 用户，创建 ~/.ssh 文件夹和 ~/.ssh/authorized_keys 文件，并赋予相应的权限</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">su</span> <span class="token function">git</span>
+<span class="token function">mkdir</span>  ~/.ssh
+vim  ~/.ssh/authorized_keys</code></pre>
+<p>这里是要把刚刚复制的公钥复制到authorized_keys中。</p>
+</li>
+<li><p>赋予权限</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">chmod</span> 600 /home/git/.ssh/authorized_keys
+<span class="token function">chmod</span> 700 /home/git/.ssh</code></pre>
+</li>
+<li><p>打开主机的cmd终端，输入命令</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -v git@server
+<span class="token comment" spellcheck="true">#server是你的阿里云服务器的ip地址</span></code></pre>
+<p><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/7.png"><br>看到这里就说明主机可以连接服务器了。</p>
+</li>
+</ul>
+<h2 id="配置Git钩子"><a href="#配置Git钩子" class="headerlink" title="配置Git钩子"></a>配置Git钩子</h2><blockquote>
+<p>钩子(Hook)，是Windows消息处理机制的一个平台,应用程序可以在上面设置子程以监视指定窗口的某种消息，而且所监视的窗口可以是其他进程所创建的。当消息到达后，在目标窗口处理函数之前处理它。钩子机制允许应用程序截获处理window消息或特定事件。 </p>
+</blockquote>
+<ul>
+<li><p>现在我们将阿里云用户切回root：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">su</span>
+<span class="token comment" spellcheck="true">#回车后，输入密码，再回车</span></code></pre>
+</li>
+<li><p>我们在/var建一个目录repo作为仓库的目录：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">mkdir</span> /var/repo</code></pre>
+</li>
+<li><p>改变repo目录的拥有者和权限：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">chown</span> -R git:git /var/repo
+<span class="token function">chmod</span> -R 755 /var/repo</code></pre>
+</li>
+<li><p>在/var目录建一个跟目录hexo作为网站根目录：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">mkdir</span> /var/hexo</code></pre>
+</li>
+<li><p>改变repo目录的拥有者和权限：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">chown</span> -R git:git /var/hexo
+<span class="token function">chmod</span> -R 755 /var/hexo</code></pre>
+</li>
+<li><p>切换到repo目录，创建git仓库</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> /var/repo
+<span class="token function">git</span> init --bare hexo.git</code></pre>
+</li>
+<li><p>在刚刚生成的仓库/var/repo/hexo.git下，有一个自动生成的 hooks 文目录。我们需要在里边新建一个新的钩子文件 post-receive。</p>
+<pre class=" language-bash"><code class="language-bash">vim /var/repo/hexo.git/hooks/post-receive</code></pre>
+</li>
+<li><p>在里面输入内容：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token function">git</span> --work-tree<span class="token operator">=</span>/var/hexo --git-dir<span class="token operator">=</span>/var/repo/hexo.git checkout -f</code></pre>
+</li>
+<li><p>然后修改一下钩子文件的拥有者和权限就行了。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">chown</span> -R git:git /var/repo/hexo.git/hooks/post-receive
+<span class="token function">chmod</span> +x /var/repo/hexo.git/hooks/post-receive</code></pre>
+</li>
+</ul>
+<h2 id="宝塔的使用"><a href="#宝塔的使用" class="headerlink" title="宝塔的使用"></a>宝塔的使用</h2><blockquote>
+<p>bt是提升运维效率的服务器管理软件，支持一键LAMP/LNMP/集群/监控/网站/FTP/数据库/JAVA等多项服务器管理功能。  </p>
+</blockquote>
+<ul>
+<li>安装和使用  </li>
+</ul>
+<ol>
+<li>宝塔的官网：<a target="_blank" rel="noopener" href="https://www.bt.cn/">宝塔面板</a>   </li>
+<li>首先在你的阿里云服务器控制台，在防火墙开放8888这个端口，不然你的主机访问不了的哦。<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/9.png"> </li>
+<li>在阿里云服务器输入命令：  </li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> -y <span class="token function">wget</span> <span class="token operator">&amp;&amp;</span> <span class="token function">wget</span> -O install.sh http://download.bt.cn/install/install_6.0.sh <span class="token operator">&amp;&amp;</span> sh install.sh</code></pre>
+<ol start="4">
+<li>安装完成后有网址、账号、密码：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/8.png"></li>
+</ol>
+<p><strong>复制外网在浏览器打开。</strong><br><em>如果账号密码忘了怎么办呢？没关系，在命令行输入<strong>bt default</strong>又会出来啦。</em><br>进去后选择安装LNMP：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/10.png"><br>5. 安装完点击网站添加站点：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/11.png"><br>6. 然后点击设置：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/12.png"><br>7. 设置网站的目录：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/13.png"><br>8. 修改server_name(你的网站域名)和root网站内容部署路径：<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/14.png"><br>9. 重启宝塔，配置生效</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">service</span> bt restart</code></pre>
+<p><strong>最后进入找到主机hexo文件夹找到_config.yml文件，在最后修改推送地址：</strong><br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/15.png">  </p>
+<p><strong>然后就可以快乐的玩耍啦！！</strong></p>
 
                 
             </div>
@@ -706,13 +835,13 @@ deploy:
                 Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%A4%E5%BC%80%E8%8A%B1/">
+                <a href="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="静态博客Hexo搭建 —— 本地、服务器两开花">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="静态博客Hexo搭建——本地and服务器">
                         
-                        <span class="card-title">静态博客Hexo搭建 —— 本地、服务器两开花</span>
+                        <span class="card-title">静态博客Hexo搭建——本地and服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -873,60 +1002,6 @@ deploy:
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
