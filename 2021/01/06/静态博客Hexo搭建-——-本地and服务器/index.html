@@ -422,10 +422,11 @@
 </blockquote>
 <blockquote>
 <p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm，</p>
-</blockquote>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org</code></pre>
-<p>安装成功后，可以通过以下命令查看cnpm版本</p>
-<pre class=" language-bash"><code class="language-bash">cnpm -v</code></pre>
+</blockquote>
+<pre><code>安装成功后，可以通过以下命令查看cnpm版本
+​```  bash
+cnpm -v</code></pre>
 <p>通过cnpm来操作下载速度会得到很大提升，但包的版本不一定是最新的。</p>
 <h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><ol>
 <li><p>创建目录<br>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，我的是blog，在此目录下操作。  </p>
@@ -502,12 +503,11 @@ deploy:
 <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>备完案后，就开始解析你的域名吧！<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png"></p>
 <h2 id="远程提交代码"><a href="#远程提交代码" class="headerlink" title="远程提交代码"></a>远程提交代码</h2><p>为了使本地可以跟远程的github建立联系,需要在本地配置SSH密钥，这样我们就可以在本地直接提交代码到 GitHub或者远端git仓库。   </p>
 <ul>
-<li>生成rsa公钥<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa</code></pre>
-</li>
-<li>在目录C:\Users\86131.ssh找到id_rsa.pub这个文件，先复制里面的公钥。</li>
+<li>使用rsa加密<br>​<code> bash ssh-keygen -t rsa</code></li>
+<li>在目录C:\Users\86131.ssh找到id_rsa.pub这个文件，先复制里面的私钥。</li>
 </ul>
 <h2 id="用Git与本地建立连接"><a href="#用Git与本地建立连接" class="headerlink" title="用Git与本地建立连接"></a>用Git与本地建立连接</h2><ul>
-<li><p>用远程连接工具连接阿里云服务器，这里我用xshell连接<br>看到Welcome to Alibaba…就成功啦。<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png"></p>
+<li><p>用远程连接工具连接阿里云服务器，这里我用Xshell连接<br>看到Welcome to Alibaba…就成功啦。<br><img src="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png"></p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#阿里云安装git</span>
 yum <span class="token function">install</span> <span class="token function">git</span>
 <span class="token comment" spellcheck="true">#装完可以查看git的版本</span>
@@ -1025,11 +1025,6 @@ vim  ~/.ssh/authorized_keys</code></pre>
                     class="white-color"></span>&nbsp;次
             </span>
             
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
             
             <br>
             
