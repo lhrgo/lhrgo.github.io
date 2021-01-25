@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Matplotlib学习, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
 
 
     <title>Matplotlib学习 | 花落的小屋</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -514,7 +514,7 @@ plt<span class="token punctuation">.</span>annotate<span class="token punctuatio
       arrowprops<span class="token operator">=</span>dict<span class="token punctuation">(</span>arrowstyle<span class="token operator">=</span><span class="token string">"->"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
 <span class="token comment" spellcheck="true">#method2</span>
 plt<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.5</span><span class="token punctuation">,</span><span class="token number">3.5</span><span class="token punctuation">,</span>r<span class="token string">'$\sigma_1\ \mu_2\ \alpha_3$'</span><span class="token punctuation">,</span>
-  fontdict<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'size':16,'color':'r'&amp;#125;)</span>
+  fontdict<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'size'</span><span class="token punctuation">:</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'r'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 运行结果：<br><img src="/2021/01/13/Matplotlib%E5%AD%A6%E4%B9%A0/Figure_25.png"></li>
 </ol>
@@ -874,13 +874,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/01/21/Linux%E5%AD%A6%E4%B9%A0/">
+                <a href="/2021/01/21/root%E5%AF%86%E7%A0%81%E5%BF%98%E8%AE%B0%E6%80%8E%E4%B9%88%E5%8A%9E/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Linux学习">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="root密码忘了怎么办？">
                         
-                        <span class="card-title">Linux学习</span>
+                        <span class="card-title">root密码忘了怎么办？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -895,11 +895,23 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            haoran
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1080,6 +1092,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 
 
 
+
     <footer class="page-footer bg-color">
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
@@ -1104,6 +1117,11 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     class="white-color"></span>&nbsp;次
             </span>
             
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
             
             <br>
             
@@ -1312,6 +1330,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

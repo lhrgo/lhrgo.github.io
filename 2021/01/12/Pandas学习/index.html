@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Pandas学习, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
 
 
     <title>Pandas学习 | 花落的小屋</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -29,13 +29,13 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -431,7 +431,7 @@ dates<span class="token operator">=</span>pd<span class="token punctuation">.</s
 <pre class=" language-python"><code class="language-python">df<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>index<span class="token operator">=</span>dates<span class="token punctuation">,</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#产生二维表</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">)</span></code></pre>
 <p>运行结果：<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/1.png"><br>2. <strong>也可以用字典创建。</strong></p>
-<pre class=" language-python"><code class="language-python">dic1<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'name':['小明','小红','狗蛋','铁柱'],'age':[17,20,5,40],'gender':['男','女','女','男']&amp;#125;</span>
+<pre class=" language-python"><code class="language-python">dic1<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'小明'</span><span class="token punctuation">,</span><span class="token string">'小红'</span><span class="token punctuation">,</span><span class="token string">'狗蛋'</span><span class="token punctuation">,</span><span class="token string">'铁柱'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'age'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'gender'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
 df3<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>dic1<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df3<span class="token punctuation">)</span></code></pre>
 <p>运行结果：<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/2.png"></p>
@@ -674,12 +674,12 @@ res2<span class="token operator">=</span>pd<span class="token punctuation">.</sp
 <span class="token keyword">print</span><span class="token punctuation">(</span>res2<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#并集</span></code></pre>
 运行结果：<br><img src="/2021/01/12/Pandas%E5%AD%A6%E4%B9%A0/14.png">  </li>
 </ol>
-<pre class=" language-python"><code class="language-python">left<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'key':['k0','k1','k2','k3'],</span>
+<pre class=" language-python"><code class="language-python">left<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'key'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'k0'</span><span class="token punctuation">,</span><span class="token string">'k1'</span><span class="token punctuation">,</span><span class="token string">'k2'</span><span class="token punctuation">,</span><span class="token string">'k3'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
                    <span class="token string">'a'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'a0'</span><span class="token punctuation">,</span><span class="token string">'a1'</span><span class="token punctuation">,</span><span class="token string">'a2'</span><span class="token punctuation">,</span><span class="token string">'a3'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-                   <span class="token string">'b'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'b0'</span><span class="token punctuation">,</span><span class="token string">'b1'</span><span class="token punctuation">,</span><span class="token string">'b2'</span><span class="token punctuation">,</span><span class="token string">'b3'</span><span class="token punctuation">]</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;)</span>
-right<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'key':['k0','k1','k2','k3'],</span>
+                   <span class="token string">'b'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'b0'</span><span class="token punctuation">,</span><span class="token string">'b1'</span><span class="token punctuation">,</span><span class="token string">'b2'</span><span class="token punctuation">,</span><span class="token string">'b3'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+right<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'key'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'k0'</span><span class="token punctuation">,</span><span class="token string">'k1'</span><span class="token punctuation">,</span><span class="token string">'k2'</span><span class="token punctuation">,</span><span class="token string">'k3'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
                     <span class="token string">'c'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'c0'</span><span class="token punctuation">,</span><span class="token string">'c1'</span><span class="token punctuation">,</span><span class="token string">'c2'</span><span class="token punctuation">,</span><span class="token string">'c3'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-                    <span class="token string">'d'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'d0'</span><span class="token punctuation">,</span><span class="token string">'d1'</span><span class="token punctuation">,</span><span class="token string">'d2'</span><span class="token punctuation">,</span><span class="token string">'d3'</span><span class="token punctuation">]</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;)</span>
+                    <span class="token string">'d'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'d0'</span><span class="token punctuation">,</span><span class="token string">'d1'</span><span class="token punctuation">,</span><span class="token string">'d2'</span><span class="token punctuation">,</span><span class="token string">'d3'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span>
 reslr<span class="token operator">=</span>pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">,</span>on<span class="token operator">=</span><span class="token string">'key'</span><span class="token punctuation">)</span>
@@ -1108,6 +1108,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 
 
 
+
     <footer class="page-footer bg-color">
     
     <div class="container row center-align" style="margin-bottom: 0px !important;">
@@ -1132,6 +1133,11 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     class="white-color"></span>&nbsp;次
             </span>
             
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
             
             <br>
             
@@ -1340,6 +1346,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
