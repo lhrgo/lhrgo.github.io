@@ -452,6 +452,48 @@ result <span class="token operator">=</span> binary_search<span class="token pun
 <p>我们计算出$x_0=2.2931662874118617$</p>
 <p>也就是说$\forall  x&gt;2.2931662874118617$，都有$x^{x+1}&gt;(x+1)^x$成立。</p>
 <p><strong>通过</strong> $199^{200}大于200^{199}$，<strong>我们可以知道，即使你的底子差一点，没有关系，你比别人多付出一天，那么你就会超越别人。</strong></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>这让我联想到，在准备数竞的时候，曾遇到过这么一道题，觉得这题蛮经典的。</p>
+<blockquote>
+<p>设$y&gt;x&gt;0$，求证$y^{x^y}&gt;x^{y^x}$   </p>
+</blockquote>
+<p>这道题关键在于分类讨论就好了。</p>
+<p>不跟你多bb，直接看证明吧！</p>
+<p>要证$y^{x^y}&gt;x^{y^x}$ ，即证$x^ylny&gt;y^xlnx$</p>
+<ol>
+<li>若$x^y\ge y^x$，则$y&gt;1$（<strong>为什么y会大于1呢，你比如说</strong>$0&lt;x&lt;y&lt;1$，<strong>就会有</strong>$x^y&lt;x^x&lt;y^x&lt;y^y$，<strong>这不就与假设</strong>$x^y\ge y^x$<strong>矛盾了吗，对吧</strong>）</li>
+</ol>
+<ul>
+<li>于是呢$x^ylny-y^xlnx \ge y^x(lny-lnx)&gt;0$</li>
+</ul>
+<ol start="2">
+<li>若$x^y&lt;y^x$，且$0&lt;x&lt;1$(<strong>注意这里</strong>$x$<strong>的分类</strong>)，</li>
+</ol>
+<ul>
+<li>则有$x^ylny-y^xlnx&gt;x^ylnx-y^xlnx&gt;0$</li>
+</ul>
+<ol start="3">
+<li>若$x^y&lt;y^x$，且$x\ge 1$，</li>
+</ol>
+<ul>
+<li> 由$x^y&lt;y^x$，其实就是$ylnx&lt;xlny$(<strong>为了更好理解下面放缩</strong>)</li>
+<li> 于是$x^ylny-y^xlnx&gt;x^{y-1}ylnx-y^xlnx =\frac{lnx}{x} (yx^y-xy^x)$</li>
+<li> 那么现在，我们只需要证$yx^y-xy^x\ge 0$就好了，其中$(y&gt;x\ge 1)$ </li>
+<li> 也就是证$lnyx^y\ge lnxy^x$</li>
+<li> 这样子，令 $f(y)=lnyx^y-lnxy^x=lny+ylnx-lnx-xlny$</li>
+<li> 则$f(x)=0$</li>
+<li> 那么${f}’(y)=\frac{1}{y}+lnx-\frac{x}{y}=lnx-\frac{x-1}{y}&gt;lnx-\frac{x-1}{x}=lnx-(1-\frac{1}{x})=\frac{\int_{1}^{x} lntdt}{x}\ge 0$</li>
+<li> 于是$\forall y&gt;x\ge 1 ，f(y)$单调递增，并且$f(x)=0$</li>
+<li> 则有$f(y)\ge 0$</li>
+<li> 即$yx^y\ge xy^x$</li>
+<li> 即$x^ylny&gt;y^xlnx$</li>
+</ul>
+<p><strong>那么，这道题我们就证完了，感谢能看到这里的你！</strong>                   </p>
 
                 
             </div>
