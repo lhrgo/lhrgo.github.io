@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title></title>
-      <link href="2021/01/25/foreign/"/>
-      <url>2021/01/25/foreign/</url>
+      <title>$199^{200}和200^{199}$哪个大？</title>
+      <link href="2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/"/>
+      <url>2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>先说结论：$199^{200}&gt;200^{199}$</p><p>与其说证明$199^{200}和200^{199}$哪个大</p><p>不如证明当$x$=$199$时，$x^{x+1}和(x+1)^x$的大小。</p><p>要证$x^{x+1}和(x+1)^x$的大小</p><p>即证$(x+1)lnx和xln(x+1)$的大小</p><p>即证$\frac{lnx}{x}和\frac{ln(x+1)}{x+1}$的大小</p><p>那么很显然，我们需要构造$g(x)=\frac{lnx}{x}$这个函数</p><p>$ \frac{\mathrm{d} g}{\mathrm{d} x} =\frac{1-ln(x)}{x}$</p><p>不难看出$g(x)$在$(0,e)$单调递增,$(e,+\infty)$单调递减</p><p>于是有$g(199)&gt;g(200)$</p><p>即有$199^{200}大于200^{199}$</p><hr><p>有更普遍的结论，$\forall x&gt;e，x^{x+1}&gt;(x+1)^x$恒成立<br>这个$e$的下限能更小吗，答案是肯定的。</p><p>我们先看一张图：<br><img src="/2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/1.png"></p><p>那么，这个交点的$x_0$到底是多少，从图像可以看出，我们只需要在$(2,e)$之间搜索那个$x_0$就好了</p><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">return</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">/</span>xeps <span class="token operator">=</span> <span class="token number">1.0e-300</span><span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">if</span> begin <span class="token operator">></span> end<span class="token punctuation">:</span>        <span class="token keyword">return</span> None    mid <span class="token operator">=</span> <span class="token punctuation">(</span>begin <span class="token operator">+</span> end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span>    <span class="token keyword">if</span> abs<span class="token punctuation">(</span>f<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> f<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> eps<span class="token punctuation">:</span>        <span class="token keyword">return</span> mid    <span class="token keyword">elif</span> f<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> f<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>        end <span class="token operator">=</span> mid <span class="token operator">-</span> eps        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        begin <span class="token operator">=</span> mid <span class="token operator">+</span> eps        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>result <span class="token operator">=</span> binary_search<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span></code></pre><p>我们计算出$x_0=2.2931662874118617$</p><p>也就是说$\forall  x&gt;2.2931662874118617$，都有$x^{x+1}&gt;(x+1)^x$成立。</p><p><strong>通过</strong> $199^{200}大于200^{199}$，<strong>我们可以知道，即使你的底子差一点，没有关系，你比别人多付出一天，那么你就会超越别人。</strong></p>]]></content>
       
       
+      <categories>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> math </tag>
+            
+        </tags>
       
     </entry>
     

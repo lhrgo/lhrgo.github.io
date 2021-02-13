@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="About, 花落的小屋">
+    <meta name="keywords" content="关于, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>About | 花落的小屋</title>
+    <title>关于 | 花落的小屋</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -130,7 +130,7 @@
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -306,21 +306,21 @@
                         
 <div class="statis">
     <span class="count"><a href="/">8</a></span>
-    <span class="name">Posts</span>
+    <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
-    <span class="name">Categories</span>
+    <span class="count"><a href="/categories">4</a></span>
+    <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">7</a></span>
-    <span class="name">Tags</span>
+    <span class="count"><a href="/tags">8</a></span>
+    <span class="name">标签</span>
 </div>
 
 
@@ -336,21 +336,21 @@
                                     
 <div class="statis">
     <span class="count"><a href="/">8</a></span>
-    <span class="name">Posts</span>
+    <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
-    <span class="name">Categories</span>
+    <span class="count"><a href="/categories">4</a></span>
+    <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">7</a></span>
-    <span class="name">Tags</span>
+    <span class="count"><a href="/tags">8</a></span>
+    <span class="name">标签</span>
 </div>
 
 
@@ -359,10 +359,6 @@
                                 <div class="career">Software Engineer</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
-    <a href="https://github.com/lhrgo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
 
 
     <a href="mailto:1697438391@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -384,10 +380,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                                 </div>
@@ -397,10 +389,6 @@
                     <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
                         <div class="social-link">
                             
-    <a href="https://github.com/lhrgo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
 
 
     <a href="mailto:1697438391@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -422,10 +410,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                         </div>
@@ -447,7 +431,7 @@
 
 <div id="postCharts" class="post-charts">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;Post Charts
+        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;文章统计图
     </div>
     <div class="row">
         <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
@@ -474,7 +458,7 @@
 
     let postsOption = {
         title: {
-            text: 'Post Publish Chart',
+            text: '文章发布统计图',
             top: -5,
             x: 'center'
         },
@@ -490,27 +474,27 @@
         },
         series: [
             {
-                name: 'Number of posts',
+                name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,8,0],
+                data: [0,0,0,0,0,0,0,0,0,0,0,7,1],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
                     data: [{
                         type: 'max',
                         itemStyle: {color: ['#3ecf8e']},
-                        name: 'Maximum'
+                        name: '最大值'
                     }, {
                         type: 'min',
                         itemStyle: {color: ['#fa755a']},
-                        name: 'Minimum'
+                        name: '最小值'
                     }]
                 },
                 markLine: {
                     itemStyle: {color: ['#ab47bc']},
                     data: [
-                        {type: 'average', name: 'Average'}
+                        {type: 'average', name: '平均值'}
                     ]
                 }
             }
@@ -521,7 +505,7 @@
 
     let categoriesOption = {
         title: {
-            text: 'Categories Chart',
+            text: '文章分类统计图',
             top: -4,
             x: 'center'
         },
@@ -531,11 +515,11 @@
         },
         series: [
             {
-                name: 'Categories',
+                name: '分类',
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"python","value":3},{"name":"Java","value":1},{"name":"Linux","value":1}],
+                data: [{"name":"python","value":3},{"name":"Linux","value":1},{"name":"数学","value":1},{"name":"Java","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -551,7 +535,7 @@
 
     let tagsOption = {
         title: {
-            text: 'TOP10 Tags Chart',
+            text: 'TOP10 标签统计图',
             top: -5,
             x: 'center'
         },
@@ -559,7 +543,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Matplotlib","Markdown","Numpy","Pandas","数据结构","Linux","博客搭建"]
+                data: ["Markdown","Matplotlib","Numpy","Pandas","Linux","math","数据结构","博客搭建"]
             }
         ],
         yAxis: [
@@ -572,23 +556,23 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1,1,1],
+                data: [1,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
                         type: 'max',
                         itemStyle: {color: ['#3ecf8e']},
-                        name: 'Maximum'
+                        name: '最大值'
                     }, {
                         type: 'min',
                         itemStyle: {color: ['#fa755a']},
-                        name: 'Minimum'
+                        name: '最小值'
                     }],
                 },
                 markLine: {
                     itemStyle: {color: ['#ab47bc']},
                     data: [
-                        {type: 'average', name: 'Average'}
+                        {type: 'average', name: '平均值'}
                     ]
                 }
             }
@@ -608,7 +592,7 @@
                 
 <div class="my-skills">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;My Skills
+        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
     </div>
     <div class="row">
         
@@ -686,18 +670,18 @@
 
     
     <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;Other Skills</div>
+        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
         <div class="tag-chips center-align">
-            
-            
-            <a href="/tags/Matplotlib/">
-                <span class="chip center-align waves-effect waves-light chip-default">Matplotlib</span>
-            </a>
-            
             
             
             <a href="/tags/Markdown/">
                 <span class="chip center-align waves-effect waves-light chip-default">Markdown</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Matplotlib/">
+                <span class="chip center-align waves-effect waves-light chip-default">Matplotlib</span>
             </a>
             
             
@@ -714,14 +698,20 @@
             
             
             
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">数据结构</span>
+            <a href="/tags/Linux/">
+                <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
             </a>
             
             
             
-            <a href="/tags/Linux/">
-                <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
+            <a href="/tags/math/">
+                <span class="chip center-align waves-effect waves-light chip-default">math</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <span class="chip center-align waves-effect waves-light chip-default">数据结构</span>
             </a>
             
             
@@ -743,7 +733,7 @@
                 
 <div id="myGallery" class="my-gallery">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-image"></i>&nbsp;&nbsp;Gallery
+        <i class="far fa-image"></i>&nbsp;&nbsp;相册
     </div>
     <div class="row">
         
@@ -826,10 +816,6 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/lhrgo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
 
 
     <a href="mailto:1697438391@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -852,10 +838,6 @@
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 </div>
     </div>
 </footer>
@@ -867,8 +849,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1022,7 +1004,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+	<!--动态线条背景-->
+	<script type="text/javascript"
+	color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {

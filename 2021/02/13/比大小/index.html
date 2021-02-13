@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="花落的小屋">
+    <meta name="keywords" content="$199^{200}和200^{199}$哪个大？, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>花落的小屋</title>
+    <title>$199^{200}和200^{199}$哪个大？ | 花落的小屋</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -130,7 +130,7 @@
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -252,7 +252,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">$199^{200}和200^{199}$哪个大？</h1>
                 </div>
             </div>
         </div>
@@ -366,12 +366,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/math/">
+                                <span class="chip bg-color">math</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                数学
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -379,8 +392,8 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-01-25
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-13
                 </div>
                 
 
@@ -401,7 +414,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>先说结论：$199^{200}&gt;200^{199}$</p>
+<p>与其说证明$199^{200}和200^{199}$哪个大</p>
+<p>不如证明当$x$=$199$时，$x^{x+1}和(x+1)^x$的大小。</p>
+<p>要证$x^{x+1}和(x+1)^x$的大小</p>
+<p>即证$(x+1)lnx和xln(x+1)$的大小</p>
+<p>即证$\frac{lnx}{x}和\frac{ln(x+1)}{x+1}$的大小</p>
+<p>那么很显然，我们需要构造$g(x)=\frac{lnx}{x}$这个函数</p>
+<p>$ \frac{\mathrm{d} g}{\mathrm{d} x} =\frac{1-ln(x)}{x}$</p>
+<p>不难看出$g(x)$在$(0,e)$单调递增,$(e,+\infty)$单调递减</p>
+<p>于是有$g(199)&gt;g(200)$</p>
+<p>即有$199^{200}大于200^{199}$</p>
+<hr>
+<p>有更普遍的结论，$\forall x&gt;e，x^{x+1}&gt;(x+1)^x$恒成立<br>这个$e$的下限能更小吗，答案是肯定的。</p>
+<p>我们先看一张图：<br><img src="/2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/1.png"></p>
+<p>那么，这个交点的$x_0$到底是多少，从图像可以看出，我们只需要在$(2,e)$之间搜索那个$x_0$就好了</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">/</span>x
+eps <span class="token operator">=</span> <span class="token number">1.0e-300</span>
+
+<span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> begin <span class="token operator">></span> end<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> None
+    mid <span class="token operator">=</span> <span class="token punctuation">(</span>begin <span class="token operator">+</span> end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span>
+    <span class="token keyword">if</span> abs<span class="token punctuation">(</span>f<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> f<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> eps<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> mid
+    <span class="token keyword">elif</span> f<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> f<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+        end <span class="token operator">=</span> mid <span class="token operator">-</span> eps
+        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        begin <span class="token operator">=</span> mid <span class="token operator">+</span> eps
+        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>
+
+result <span class="token operator">=</span> binary_search<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span></code></pre>
+<p>我们计算出$x_0=2.2931662874118617$</p>
+<p>也就是说$\forall  x&gt;2.2931662874118617$，都有$x^{x+1}&gt;(x+1)^x$成立。</p>
+<p><strong>通过</strong> $199^{200}大于200^{199}$，<strong>我们可以知道，即使你的底子差一点，没有关系，你比别人多付出一天，那么你就会超越别人。</strong></p>
+
                 
             </div>
             <hr/>
@@ -414,7 +465,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/math/">
+                                    <span class="chip bg-color">math</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -584,16 +639,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/01/25/foreign/">
+                <a href="/2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="$199^{200}和200^{199}$哪个大？">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">$199^{200}和200^{199}$哪个大？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -604,17 +659,29 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-13
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            haoran
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                    数学
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -622,7 +689,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/01/24/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
@@ -696,7 +763,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -792,6 +859,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
 
@@ -830,10 +904,6 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/lhrgo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
 
 
     <a href="mailto:1697438391@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -856,10 +926,6 @@
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 </div>
     </div>
 </footer>
@@ -871,8 +937,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1026,7 +1092,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+	<!--动态线条背景-->
+	<script type="text/javascript"
+	color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
