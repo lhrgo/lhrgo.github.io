@@ -482,12 +482,12 @@ result <span class="token operator">=</span> binary_search<span class="token pun
 </ol>
 <ul>
 <li> 由$x^y&lt;y^x$，其实就是$ylnx&lt;xlny$(<strong>为了更好理解下面放缩</strong>)</li>
-<li> 于是$x^ylny-y^xlnx&gt;x^{y-1}ylnx-y^xlnx =\frac{lnx}{x} (yx^y-xy^x)$</li>
+<li>于是<br>$x^ylny-y^xlnx$<br>$&gt;x^{y-1}ylnx-y^xlnx$<br>$=\frac{lnx}{x} (yx^y-xy^x)$</li>
 <li> 那么现在，我们只需要证$yx^y-xy^x\ge 0$就好了，其中$(y&gt;x\ge 1)$ </li>
 <li> 也就是证$lnyx^y\ge lnxy^x$</li>
-<li> 这样子，令 $f(y)=lnyx^y-lnxy^x=lny+ylnx-lnx-xlny$</li>
+<li>这样子，令<br>$f(y)=lnyx^y-lnxy^x$<br>$=lny+ylnx-lnx-xlny$</li>
 <li> 则$f(x)=0$</li>
-<li> 那么${f}’(y)=\frac{1}{y}+lnx-\frac{x}{y}=lnx-\frac{x-1}{y}&gt;lnx-\frac{x-1}{x}=lnx-(1-\frac{1}{x})=\frac{\int_{1}^{x} lntdt}{x}\ge 0$</li>
+<li>那么<br> ${f}’(y)=\frac{1}{y}+lnx-\frac{x}{y}$<br> $=lnx-\frac{x-1}{y}$<br> $&gt;lnx-\frac{x-1}{x}$<br> $=lnx-(1-\frac{1}{x})$<br> $=\frac{\int_{1}^{x} lntdt}{x}\ge 0$</li>
 <li> 于是$\forall y&gt;x\ge 1 ，f(y)$单调递增，并且$f(x)=0$</li>
 <li> 则有$f(y)\ge 0$</li>
 <li> 即$yx^y\ge xy^x$</li>
