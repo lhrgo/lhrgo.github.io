@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="$199^{200}和200^{199}$哪个大？, 花落的小屋">
+    <meta name="keywords" content="MarkDown语法, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>$199^{200}和200^{199}$哪个大？ | 花落的小屋</title>
+    <title>MarkDown语法 | 花落的小屋</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">$199^{200}和200^{199}$哪个大？</h1>
+                    <h1 class="description center-align post-title">MarkDown语法</h1>
                 </div>
             </div>
         </div>
@@ -368,23 +368,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/math/">
-                                <span class="chip bg-color">math</span>
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
-                                数学
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -393,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-13
+                    2021-01-07
                 </div>
                 
 
@@ -414,87 +405,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>先说结论：$199^{200}&gt;200^{199}$</p>
-<p>与其说证明$199^{200}和200^{199}$哪个大</p>
-<p>不如证明当$x$=$199$时，$x^{x+1}和(x+1)^x$的大小。</p>
-<p>要证$x^{x+1}和(x+1)^x$的大小</p>
-<p>即证$(x+1)lnx和xln(x+1)$的大小</p>
-<p>即证$\frac{lnx}{x}和\frac{ln(x+1)}{x+1}$的大小</p>
-<p>那么很显然，我们需要构造$g(x)=\frac{lnx}{x}$这个函数</p>
-<p>则$ \frac{\mathrm{d} g}{\mathrm{d} x} =\frac{1-ln(x)}{x}$</p>
-<p>不难看出$g(x)$在$(0,e)$单调递增,$(e,+\infty)$单调递减</p>
-<p>于是有$g(199)&gt;g(200)$</p>
-<p>即有$199^{200}大于200^{199}$</p>
-<hr>
-<p>有更普遍的结论，$\forall x&gt;e，x^{x+1}&gt;(x+1)^x$恒成立<br>这个$e$的下限能更小吗，答案是肯定的。</p>
-<p>我们先看一张图：<br><img src="/2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/1.png"></p>
-<p>那么，这个交点的$x_0$到底是多少，从图像可以看出，我们只需要在$(2,e)$之间搜索那个$x_0$就好了</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">def</span> <span class="token function">g</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">/</span>x
-eps <span class="token operator">=</span> <span class="token number">1.0e-300</span>
-
-<span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">if</span> begin <span class="token operator">></span> end<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> None
-    mid <span class="token operator">=</span> <span class="token punctuation">(</span>begin <span class="token operator">+</span> end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span>
-    <span class="token keyword">if</span> abs<span class="token punctuation">(</span>g<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> g<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> eps<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> mid
-    <span class="token keyword">elif</span> g<span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">-</span> g<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-        end <span class="token operator">=</span> mid <span class="token operator">-</span> eps
-        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        begin <span class="token operator">=</span> mid <span class="token operator">+</span> eps
-        <span class="token keyword">return</span> binary_search<span class="token punctuation">(</span>begin<span class="token punctuation">,</span> end<span class="token punctuation">)</span>
-
-result <span class="token operator">=</span> binary_search<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span></code></pre>
-<p>我们计算出$x_0=2.2931662874118617$</p>
-<p>也就是说$\forall  x&gt;2.2931662874118617$，都有$x^{x+1}&gt;(x+1)^x$成立。</p>
-<p><strong>通过</strong> $199^{200}大于200^{199}$，<strong>我们可以知道，即使你的底子差一点，没有关系，你比别人多付出一天，那么你就会超越别人。</strong></p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>这让我想到这么一道题，觉得这题蛮经典的。</p>
-<blockquote>
-<p>设$y&gt;x&gt;0$，求证$y^{x^y}&gt;x^{y^x}$   </p>
+                <h1 id="MarkDown语法"><a href="#MarkDown语法" class="headerlink" title="MarkDown语法"></a>MarkDown语法</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> MarkDown学习 </span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题  </span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题  </span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题  </span></code></pre>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>helloworld</em><br><strong>helloworld</strong><br><strong><em>helloworld</em></strong><br><del>helloworld</del>   </p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span>helloworld<span class="token punctuation">*</span></span>  
+<span class="token bold"><span class="token punctuation">**</span>helloworld<span class="token punctuation">**</span></span>  
+<span class="token bold"><span class="token punctuation">**</span>*helloworld<span class="token punctuation">**</span></span>*     
+~~helloworld~~   </code></pre>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>studystudystudy  </p>
 </blockquote>
-<p>这道题关键在于分类讨论就好了。</p>
-<p>直接看证明吧！~~</p>
-<p>要证$y^{x^y}&gt;x^{y^x}$ ，即证$x^ylny&gt;y^xlnx$</p>
-<ol>
-<li>若$x^y\ge y^x$，则$y&gt;1$（<strong>为什么</strong>$y$<strong>会大于1呢，比如说</strong>$0&lt;x&lt;y&lt;1$，<strong>就会有</strong>$x^y&lt;x^x&lt;y^x&lt;y^y$，<strong>这不就与假设</strong>$x^y\ge y^x$<strong>矛盾了吗，对吧</strong>）<br>于是   </li>
-</ol>
-<p>$$x^ylny-y^xlnx \ge y^x(lny-lnx)&gt;0$$  </p>
-<ol start="2">
-<li><p>若$x^y&lt;y^x$，且$0&lt;x&lt;1$(<strong>注意这里</strong>$x$<strong>的分类</strong>)<br>则有  </p>
-<p>$$x^ylny-y^xlnx&gt;x^ylnx-y^xlnx&gt;0$$  </p>
-</li>
-<li><p>若$x^y&lt;y^x$，且$x\ge 1$，</p>
-</li>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> studystudystudy    </code></pre>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
+<hr>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+<span class="token hr punctuation">***</span></code></pre>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="/2021/01/07/MarkDown%E8%AF%AD%E6%B3%95/avatar.jpg" alt="hi"></p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token url">![名称](图片地址)</span></code></pre>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://lhrgo.github.io/">花落的小屋</a></p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token url">[名称](链接地址)</span></code></pre>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
+<li>a</li>
+<li>b</li>
 </ol>
 <ul>
-<li><p>由$x^y&lt;y^x$，其实就是$ylnx&lt;xlny$(<strong>为了更好理解下面放缩</strong>)啦  </p>
-<p>于是<br>$$<br>x^ylny-y^xlnx&gt;x^{y-1}ylnx-y^xlnx=\frac{lnx}{x} (yx^y-xy^x)\\<br>$$  </p>
-</li>
-<li><p> 那么现在，我们只需要证$yx^y-xy^x\ge 0$就好了，其中$(y&gt;x\ge 1)$ </p>
-</li>
-<li><p>也就是证<br>$$lnyx^y\ge lnxy^x$$</p>
-</li>
-<li><p>这样子，我们令<br>$$<br>f(y)=lnyx^y-lnxy^x=lny+ylnx-lnx-xlny\\<br>$$</p>
-</li>
-<li><p> 不难看出$f(x)=0$(<strong>关键！！</strong>)  </p>
-</li>
-<li><p>并且<br>$${f}’(y)=\frac{1}{y}+lnx-\frac{x}{y}=lnx-\frac{x-1}{y}&gt;lnx-\frac{x-1}{x} =lnx-(1-\frac{1}{x})=\frac{\int_{1}^{x} lntdt}{x}\ge 0\\<br>$$  </p>
-</li>
-<li><p>于是呢</p>
-<p>$\forall y&gt;x\ge 1 ，f(y)$单调递增，再根据$f(x)=0$<br>就会有$f(y)\ge 0$<br>即$yx^y\ge xy^x$<br>即$x^ylny&gt;y^xlnx$</p>
-</li>
+<li>aa</li>
+<li>bb</li>
 </ul>
-<p><strong>那么，这道题我们就证完了~~</strong>                   </p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> a
+<span class="token list punctuation">2.</span> b
+
+<span class="token list punctuation">-</span> aa
+<span class="token list punctuation">-</span> bb</code></pre>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>性别</th>
+<th>生日</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>男</td>
+<td>2000.10.10</td>
+</tr>
+</tbody></table>
+<pre class=" language-markdown"><code class="language-markdown">| 名字 | 性别 | 生日       |
+| ---- | ---- | ---------- |
+| 张三 | 男   | 2000.10.10 |</code></pre>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-Java"><code class="language-Java">public void aaa(){
+    System.out.println(666);
+}</code></pre>
 
                 
             </div>
@@ -509,8 +473,8 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/math/">
-                                    <span class="chip bg-color">math</span>
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
                         </div>
@@ -684,13 +648,13 @@ result <span class="token operator">=</span> binary_search<span class="token pun
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/05/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
+                <a href="/2021/01/11/Numpy%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="一元线性回归">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Numpy学习">
                         
-                        <span class="card-title">一元线性回归</span>
+                        <span class="card-title">Numpy学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -701,14 +665,14 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-11
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
-                                    数学
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -718,8 +682,8 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/math/">
-                        <span class="chip bg-color">math</span>
+                    <a href="/tags/Numpy/">
+                        <span class="chip bg-color">Numpy</span>
                     </a>
                     
                 </div>
@@ -733,13 +697,13 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/24/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+                <a href="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="稀疏数组">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="静态博客Hexo搭建——本地and服务器">
                         
-                        <span class="card-title">稀疏数组</span>
+                        <span class="card-title">静态博客Hexo搭建——本地and服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -750,16 +714,12 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            haoran
                             
                         </span>
                     </div>
@@ -767,8 +727,8 @@ result <span class="token operator">=</span> binary_search<span class="token pun
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
                     </a>
                     
                 </div>
@@ -899,13 +859,6 @@ result <span class="token operator">=</span> binary_search<span class="token pun
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 

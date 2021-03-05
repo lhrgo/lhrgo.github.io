@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="MarkDown学习, 花落的小屋">
+    <meta name="keywords" content="一元线性回归, 花落的小屋">
     <meta name="description" content="学习是最好的投资">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MarkDown学习 | 花落的小屋</title>
+    <title>一元线性回归 | 花落的小屋</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MarkDown学习</h1>
+                    <h1 class="description center-align post-title">一元线性回归</h1>
                 </div>
             </div>
         </div>
@@ -368,14 +368,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/math/">
+                                <span class="chip bg-color">math</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                数学
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -384,7 +393,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-07
+                    2021-03-05
                 </div>
                 
 
@@ -405,61 +414,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MarkDown学习"><a href="#MarkDown学习" class="headerlink" title="MarkDown学习"></a>MarkDown学习</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> MarkDown学习 </span>
-<span class="token title important"><span class="token punctuation">##</span> 二级标题  </span>
-<span class="token title important"><span class="token punctuation">###</span> 三级标题  </span>
-<span class="token title important"><span class="token punctuation">####</span> 四级标题  </span></code></pre>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>helloworld</em><br><strong>helloworld</strong><br><strong><em>helloworld</em></strong><br><del>helloworld</del>   </p>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span>helloworld<span class="token punctuation">*</span></span>  
-<span class="token bold"><span class="token punctuation">**</span>helloworld<span class="token punctuation">**</span></span>  
-<span class="token bold"><span class="token punctuation">**</span>*helloworld<span class="token punctuation">**</span></span>*     
-~~helloworld~~   </code></pre>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>studystudystudy  </p>
-</blockquote>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> studystudystudy    </code></pre>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
-<hr>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
-<span class="token hr punctuation">***</span></code></pre>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="/2021/01/07/MarkDown%E5%AD%A6%E4%B9%A0/avatar.jpg" alt="hi"></p>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token url">![名称](图片地址)</span></code></pre>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://lhrgo.github.io/">花落的小屋</a></p>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token url">[名称](链接地址)</span></code></pre>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
-<li>a</li>
-<li>b</li>
-</ol>
+                <h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><h3 id="回归模型"><a href="#回归模型" class="headerlink" title="回归模型"></a>回归模型</h3><p>一元线性回归的模型为 $y=\beta_0+\beta_1x+\varepsilon$ ，$\beta_0$，$\beta_1$为回归系数，$\varepsilon$是随机误差项，总是假设：</p>
 <ul>
-<li>aa</li>
-<li>bb</li>
+<li>$y$与$x$有线性关系</li>
+<li>重复抽样中，$x$取值固定，即$x$是非随机的</li>
+<li>$\varepsilon$为随机变量，且独立</li>
+<li>$\varepsilon\in N(0,\sigma^2)$，$\sigma$为定值</li>
 </ul>
-<pre class=" language-markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> a
-<span class="token list punctuation">2.</span> b
-
-<span class="token list punctuation">-</span> aa
-<span class="token list punctuation">-</span> bb</code></pre>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>性别</th>
-<th>生日</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>张三</td>
-<td>男</td>
-<td>2000.10.10</td>
-</tr>
-</tbody></table>
-<pre class=" language-markdown"><code class="language-markdown">| 名字 | 性别 | 生日       |
-| ---- | ---- | ---------- |
-| 张三 | 男   | 2000.10.10 |</code></pre>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-Java"><code class="language-Java">public void aaa(){
-    System.out.println(666);
-}</code></pre>
-
+<p>若对$y$和$x$分别进行$n$次独立观测，得到以下$n$对观测值：<br>$$( y_i , x_i)，i = 1,2,…,n$$<br>这$n$对观测值之间的关系符合模型：<br>$$y_i = β_0 + β_1x + ε_i ，i = 1,2,…,n$$<br>这里，$x_i$是自变量在第$i$次观测时的取值，它是一个非随机变量，并且没有测量误差。对应于$x_i$，$y_i$ 是一个随机变量，它的随机性是由$ε_i$造成的。$ε_i \in N(0,σ^2 )$，对于不同的观测，当$i ≠ j$时，$ε_i$与$ε_j$是相互独立的。</p>
+<h3 id="回归方程"><a href="#回归方程" class="headerlink" title="回归方程"></a>回归方程</h3><p>根据回归模型中的假设，我们知道$E(\varepsilon)=0$，那么$E(y)=\beta_0+\beta_1x,D(y)=\sigma^2$，即随机变量 $y\in N(\beta_0+ \beta_1 x,\sigma^2)$。<br>其中$E(y)$称为总体回归方程。</p>
+<h3 id="估计的回归方程"><a href="#估计的回归方程" class="headerlink" title="估计的回归方程"></a>估计的回归方程</h3><p>估计样本的回归方程，总体回归参数$\beta_0,\beta_1$是未知的，因此我们需要用样本去估计它们，其估计的回归方程为：<br>$$\hat{y}=\hat{\beta_0}+\hat{\beta_1}x$$  </p>
+<h2 id="最小二乘估计"><a href="#最小二乘估计" class="headerlink" title="最小二乘估计"></a>最小二乘估计</h2><p>记$y_i=\hat{y_i}+e_i$，其中$e_i$为第$i$个观测值的残差。用最小二乘法估计$\beta_0,\beta_1$的值，即取$\beta_0,\beta_1$的一组估计值$\hat{\beta_0},\hat{\beta_1}$，使 $y_i$与$\hat{y_i}$的离差平方和达到最小，即$\sum_{i=1}^{n} e_i^2$最小。<br><img src="/2021/03/05/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/1.png" alt="最小二乘法示意图"><br>若记<br>$$Q(\beta_0,\beta_1)=\sum_{i=1}^{n}(y_i-\beta_0-\beta_1x_i)^2$$<br>则<br>$$Q(\hat{\beta_0},\hat{\beta_1})=min{Q(\beta_0,\beta_1)}=\sum_{i=1}^{n}(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)^2$$<br>显然$Q(\beta_0,\beta_1)\ge0$，且关于$\beta_0,\beta_1$可微，则由多元函数存在极值的必要条件得<br>$$<br>\begin{cases}<br>    \frac{\partial Q}{\partial \beta_0} =-2\sum_{i=1}^{n}(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)=0 \\<br>    \\<br>    \frac{\partial Q}{\partial \beta_1} =-2\sum_{i=1}^{n}x_i(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)=0\\<br>\end{cases}<br>$$<br>求解可以得到<br>$$<br>\begin{cases}<br>    \hat{\beta_1}=\frac{n\sum_{i=1}^{n}x_iy_i -\sum_{i=1}^{n} x_i\sum_{i=1}^{n} y_i}{n\sum_{i=1}^{n}x_i^2 -(\sum_{i=1}^{n}x_i )^2} \\<br>    \\<br>    \hat{\beta_0}=\overline{y}-\hat{\beta_1}\overline{x}<br>\end{cases}<br>$$<br>由$\hat{\beta_0}=\overline{y}-\hat{\beta_1}\overline{x}$可以看出，回归直线过样本中心点$(\overline{x},\overline{y})$。<br>由偏导方程组可以知道<br>$$<br>\begin{cases}<br>    \sum_{i=1}^{n}e_i=0\\<br>    \\<br>    \sum_{i=1}^{n}x_ie_i=0\\<br>\end{cases}<br>$$<br>这是残差的重要性质，后面会用到。</p>
+<h2 id="拟合优度检验"><a href="#拟合优度检验" class="headerlink" title="拟合优度检验"></a>拟合优度检验</h2><h2 id="显著性检验"><a href="#显著性检验" class="headerlink" title="显著性检验"></a>显著性检验</h2><h3 id="线性关系的检验"><a href="#线性关系的检验" class="headerlink" title="线性关系的检验"></a>线性关系的检验</h3><h3 id="回归系数的检验"><a href="#回归系数的检验" class="headerlink" title="回归系数的检验"></a>回归系数的检验</h3><h2 id="回归分析结果评价"><a href="#回归分析结果评价" class="headerlink" title="回归分析结果评价"></a>回归分析结果评价</h2><h2 id="预测"><a href="#预测" class="headerlink" title="预测"></a>预测</h2><h3 id="点估计"><a href="#点估计" class="headerlink" title="点估计"></a>点估计</h3><h3 id="区间估计"><a href="#区间估计" class="headerlink" title="区间估计"></a>区间估计</h3><h2 id="残差分析"><a href="#残差分析" class="headerlink" title="残差分析"></a>残差分析</h2>
                 
             </div>
             <hr/>
@@ -473,8 +439,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/math/">
+                                    <span class="chip bg-color">math</span>
                                 </a>
                             
                         </div>
@@ -644,17 +610,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/11/Numpy%E5%AD%A6%E4%B9%A0/">
+                <a href="/2021/03/05/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Numpy学习">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="一元线性回归">
                         
-                        <span class="card-title">Numpy学习</span>
+                        <span class="card-title">一元线性回归</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -664,26 +631,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                    数学
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Numpy/">
-                        <span class="chip bg-color">Numpy</span>
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
                     </a>
                     
                 </div>
@@ -697,13 +665,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/06/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2Hexo%E6%90%AD%E5%BB%BA-%E2%80%94%E2%80%94-%E6%9C%AC%E5%9C%B0and%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                <a href="/2021/02/13/%E6%AF%94%E5%A4%A7%E5%B0%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="静态博客Hexo搭建——本地and服务器">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="$199^{200}和200^{199}$哪个大？">
                         
-                        <span class="card-title">静态博客Hexo搭建——本地and服务器</span>
+                        <span class="card-title">$199^{200}和200^{199}$哪个大？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -714,12 +682,16 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-13
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            haoran
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%A6/" class="post-category">
+                                    数学
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -727,8 +699,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
                     </a>
                     
                 </div>
@@ -859,6 +831,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
