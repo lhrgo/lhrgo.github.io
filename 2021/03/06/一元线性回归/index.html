@@ -421,8 +421,8 @@
 <li>$\varepsilon$为随机变量，且独立</li>
 <li>$\varepsilon\sim N(0,\sigma^2)$，$\sigma$为定值</li>
 </ul>
-<p>若对$y$和$x$分别进行$n$次独立观测，得到以下$n$对观测值：<br>$$( y_i , x_i)，i = 1,2,…,n$$<br>这$n$对观测值之间的关系符合模型：<br>$$y_i = β_0 + β_1x + ε_i ，i = 1,2,…,n$$<br>这里，$x_i$是自变量在第$i$次观测时的取值，它是一个非随机变量，并且没有测量误差。对应于$x_i$，$y_i$ 是一个随机变量，它的随机性是由$ε_i$造成的。$ε_i \in N(0,σ^2 )$，对于不同的观测，当$i ≠ j$时，$ε_i$与$ε_j$是相互独立的。</p>
-<h3 id="回归方程"><a href="#回归方程" class="headerlink" title="回归方程"></a>回归方程</h3><p>根据回归模型中的假设，我们知道$E(\varepsilon)=0$，那么$E(y)=\beta_0+\beta_1x,D(y)=\sigma^2$，即随机变量 $y\in N(\beta_0+ \beta_1 x,\sigma^2)$。<br>其中$E(y)$称为总体回归方程。</p>
+<p>若对$y$和$x$分别进行$n$次独立观测，得到以下$n$对观测值：<br>$$( y_i , x_i)，i = 1,2,…,n$$<br>这$n$对观测值之间的关系符合模型：<br>$$y_i = β_0 + β_1x + ε_i ，i = 1,2,…,n$$<br>这里，$x_i$是自变量在第$i$次观测时的取值，它是一个非随机变量，并且没有测量误差。对应于$x_i$，$y_i$ 是一个随机变量，它的随机性是由$ε_i$造成的。$ε_i \sim N(0,σ^2 )$，对于不同的观测，当$i ≠ j$时，$ε_i$与$ε_j$是相互独立的。</p>
+<h3 id="回归方程"><a href="#回归方程" class="headerlink" title="回归方程"></a>回归方程</h3><p>根据回归模型中的假设，我们知道$E(\varepsilon)=0$，那么$E(y)=\beta_0+\beta_1x,D(y)=\sigma^2$，即随机变量 $y\sim N(\beta_0+ \beta_1 x,\sigma^2)$。<br>其中$E(y)$称为总体回归方程。</p>
 <h3 id="估计的回归方程"><a href="#估计的回归方程" class="headerlink" title="估计的回归方程"></a>估计的回归方程</h3><p>估计样本的回归方程，总体回归参数$\beta_0,\beta_1$是未知的，因此我们需要用样本去估计它们，其估计的回归方程为：<br>$$\hat{y}=\hat{\beta_0}+\hat{\beta_1}x$$  </p>
 <h2 id="最小二乘估计"><a href="#最小二乘估计" class="headerlink" title="最小二乘估计"></a>最小二乘估计</h2><p>记$y_i=\hat{y_i}+e_i$，其中$e_i$为第$i$个观测值的残差。用最小二乘法估计$\beta_0,\beta_1$的值，即取$\beta_0,\beta_1$的一组估计值$\hat{\beta_0},\hat{\beta_1}$，使 $y_i$与$\hat{y_i}$的离差平方和达到最小，即$\sum_{i=1}^{n} e_i^2$最小。<br><img src="/2021/03/06/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/1.png" alt="最小二乘法示意图"><br>若记<br>$$Q(\beta_0,\beta_1)=\sum_{i=1}^{n}(y_i-\beta_0-\beta_1x_i)^2$$<br>则<br>$$Q(\hat{\beta_0},\hat{\beta_1})=min{Q(\beta_0,\beta_1)}=\sum_{i=1}^{n}(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)^2$$<br>显然$Q(\beta_0,\beta_1)\ge0$，且关于$\beta_0,\beta_1$可微，则由多元函数存在极值的必要条件得<br>$$<br>\begin{cases}<br>    \frac{\partial Q}{\partial \beta_0} =-2\sum_{i=1}^{n}(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)=0 \\<br>    \\<br>    \frac{\partial Q}{\partial \beta_1} =-2\sum_{i=1}^{n}x_i(y_i-\hat{\beta_0}-\hat{\beta_1}x_i)=0\\<br>\end{cases}<br>$$<br>求解可以得到<br>$$<br>\begin{cases}<br>    \hat{\beta_1}=\frac{n\sum_{i=1}^{n}x_iy_i -\sum_{i=1}^{n} x_i\sum_{i=1}^{n} y_i}{n\sum_{i=1}^{n}x_i^2 -(\sum_{i=1}^{n}x_i )^2} \\<br>    \\<br>    \hat{\beta_0}=\overline{y}-\hat{\beta_1}\overline{x}<br>\end{cases}<br>$$<br>由$\hat{\beta_0}=\overline{y}-\hat{\beta_1}\overline{x}$可以看出，回归直线过样本中心点$(\overline{x},\overline{y})$。<br>由偏导方程组可以知道<br>$$<br>\begin{cases}<br>    \sum e_i=0\\<br>    \\<br>    \sum x_ie_i=0\\<br>\end{cases}<br>$$<br>这是残差的重要性质，后面会用到。  </p>
 <p>将$\hat{\beta_1}$变换<br>$$<br>\begin{aligned}<br>    \hat{\beta_1}<br>    &amp;=\frac{n \sum x_i y_i - \sum x_i\sum y_i}{n\sum x_i^2 -(\sum x_i )^2}\\<br>    &amp;=\frac{\sum x_iy_i-n\overline{x}\overline{y} }{\sum x_i^2-n\overline{x}^2 } \\<br>    &amp;=\frac{\sum (x_i-\overline{x} )(y_i-\overline{y} )}{\sum (x_i-\overline{x} )^2} \\<br>\end{aligned}<br>$$  </p>
@@ -490,7 +490,7 @@
 <h2 id="残差分析"><a href="#残差分析" class="headerlink" title="残差分析"></a>残差分析</h2><p>在回归模型中，假定$\varepsilon \sim N(0,\sigma^2)$，如果假定不成立，那么，前面所做的事情就不能用统计的知识来解释，因此，确定$\varepsilon$的假定是否成立就是进行残差分析。 </p>
 <p>第$i$个值的预测值为<br>$$<br>\hat{y_i}=\hat{\beta_0}+\hat{\beta_1}x_i<br>$$</p>
 <p>第$i$个值的观测值为<br>$$<br>y_i=\beta_0+\beta_1x_i+\varepsilon_i<br>$$</p>
-<p>误差项 $\varepsilon_i=y_i-\beta_0+\beta_1x_i$  </p>
+<p>误差项 $\varepsilon_i=y_i-\beta_0-\beta_1x_i$  </p>
 <p>残差项 $e_i=y_i-\hat{\beta_0}-\hat{\beta_1}x_i$  </p>
 <p>不难发现，<strong>对$\varepsilon_i$的估计就是$e_i$。</strong>  </p>
 <p><img src="/2021/03/06/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/4.png" alt="不同形态的残差图"></p>
@@ -503,7 +503,8 @@
 </li>
 </ul>
 <p>对$\varepsilon$的正态性假定的检验，也可以通过标准化残差的分析来完成。<br>为了便于观察和控制残差$e_i$的大小，我们对$e_i$进行标准化，得到$\frac{e_i}{\sigma}$服从$N(0,1)$，由于$\sigma$未知，因此用$S_e$替换，得到<br>$$<br>z_{e_i}=\frac{e_i}{S_e}<br>$$</p>
-<p>如果误差项$\varepsilon$服从正态分布，其标准化残差也应该服从正态分布，在标准化残差图中，大约有$95%$的标准化残差在$-2\sim2$之间，如果不是，则$\varepsilon$的假定错误。</p>
+<p>如果误差项$\varepsilon$服从正态分布，其标准化残差也应该服从正态分布，在标准化残差图中，大约有$95$%的标准化残差在$-2\sim2$之间，如果不是，则$\varepsilon$的假定错误。  </p>
+<p>&emsp;&emsp;<strong><em>那么，一元回归分析的理论部分就介绍完了，下次咱们再讲讲多元回归分析的相关理论，好好学，你会发现都不是很难理解。</em></strong></p>
 
                 
             </div>
